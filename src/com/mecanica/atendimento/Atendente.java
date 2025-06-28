@@ -1,16 +1,40 @@
 package com.mecanica.atendimento;
 
-import com.mecanica.model.AtendenteCallCenter;
-import com.mecanica.model.AtendentePresencial;
-import com.mecanica.model.Cliente;
+import com.mecanica.model.*;
 
 public class Atendente {
     public static void main(String[] args) {
-        AtendentePresencial recepcao = new AtendentePresencial();
-        AtendenteCallCenter callCenter =  new AtendenteCallCenter();
-        Cliente cliente = new Cliente();
 
-        cliente.ligacao();
+        AtendentePresencial recepcao = new AtendentePresencial();
+        recepcao.setNome("José");
+        recepcao.setMatricula("328982");
+
+        AtendenteCallCenter callCenter = new AtendenteCallCenter();
+        callCenter.setNome("Pedro");
+        callCenter.setRegistro("5147");
+        callCenter.setMatricula("328982");
+
+
+        Cliente clientePresencial = new Cliente();
+        clientePresencial.setNome("Daniel");
+        clientePresencial.setCarro("Astra");
+        clientePresencial.setTelefone("33 5321-285");
+        recepcao.atendimento();
+
+        Cliente clienteTelefone = new Cliente();
+        clienteTelefone.setNome("Moises");
+        clienteTelefone.setCarro("Gol");
+        clienteTelefone.setTelefone("33 5321-285");
+        clienteTelefone.ligacao();
+
+        Mecanico mecanico = new Mecanico();
+        mecanico.verificarElevador();
+        mecanico.mecanicoDisponivel();
+
+
+        Estoque estoque = new Estoque();
+        estoque.setConjunto(new String[]{"CARBURADOR GOL", " 20 filtro de Óleo de motor ", "Tampa de óleo golf", " 20 Óleos motor 10W40"});
+        estoque.verificarEstoque();
 
     }
 }

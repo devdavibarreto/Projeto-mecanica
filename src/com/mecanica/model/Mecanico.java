@@ -1,8 +1,12 @@
 package com.mecanica.model;
 
+
+import java.util.concurrent.ThreadLocalRandom;
+
 public class Mecanico {
     private String nome;
-int mecanicosDisponivel = 1 ;
+    int mecanicosDisponivel = mecanicosLivres();
+
     public String getNome() {
         return nome;
     }
@@ -29,11 +33,16 @@ int mecanicosDisponivel = 1 ;
         }
     }
 
-    public void mecanicoDisponivel(){
-       if (mecanicosDisponivel >= 1 ) {
-           System.out.println("Temos o total de " + mecanicosDisponivel + " mecanicos disponivel");
-       }else {
-           System.out.println("Não temos mecanicos disponiveis");
-       }
+    public void mecanicoDisponivel() {
+        if (mecanicosDisponivel >= 1) {
+            System.out.println("Temos o total de " + mecanicosDisponivel + " mecanicos disponivel");
+        } else {
+            System.out.println("Não temos mecanicos disponiveis");
+        }
+    }
+
+    public static int mecanicosLivres() {
+        ThreadLocalRandom.current().nextInt(0, 10);
+        return ThreadLocalRandom.current().nextInt(1, 10);
     }
 }
