@@ -1,5 +1,9 @@
 package com.mecanica.model;
 
+import java.util.Random;
+
+
+
 public class Cliente {
 
     private String nome;
@@ -28,5 +32,26 @@ public class Cliente {
 
     public void setTelefone(String telefone) {
         this.telefone = telefone;
+    }
+
+
+    AtendenteCallCenter atendende = new AtendenteCallCenter();
+
+    public void ligacao(){
+        do {
+            System.out.println("TELEFONE TOCANDO");
+
+        }while(tocandoTelefone());
+        atendende.atendimento();
+
+    }
+
+
+    public static boolean tocandoTelefone(){
+        boolean atendeu = new Random().nextInt(3)== 1;
+        String atendimento = atendeu ? "Telefone atendido" : "No momento não temos atendentes disponiveis";
+        System.out.println(atendimento);
+
+        return !atendeu;
     }
 }

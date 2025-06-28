@@ -1,5 +1,7 @@
 package com.mecanica.model;
 
+import java.util.Random;
+
 public class AtendenteCallCenter {
     private String nome;
     private String matricula;
@@ -28,4 +30,15 @@ public class AtendenteCallCenter {
     public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
+
+    // metódos
+
+    void atendimento(){
+        System.out.println("Olá sou o(a) " + getNome() + " da oficina Barreto´s Car como posso ajudar? ");
+
+    }
+
+
+
+
 }

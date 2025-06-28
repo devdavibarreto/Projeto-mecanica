@@ -1,6 +1,6 @@
 package com.mecanica.model;
 
-public class AtentePresencial {
+public class AtendentePresencial {
     private String nome;
     private String matricula;
 
@@ -18,5 +18,9 @@ public class AtentePresencial {
 
     public void setMatricula(String matricula) {
         this.matricula = matricula;
+    }
+
+    public void atendimento(){
+        System.out.println("Olá sou o(a) " + getNome() + " da oficina Barreto´s Car como posso ajudar? ");
     }
 }
