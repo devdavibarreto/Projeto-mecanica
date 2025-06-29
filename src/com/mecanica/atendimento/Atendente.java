@@ -34,9 +34,9 @@ public class Atendente {
 
 
         Estoque estoque = new Estoque();
-        EstoqueDePecas pecas = new EstoqueDePecas();
-        String[] novasPecas = pecas.pecasAtualizadas();
-        estoque.setConjunto(novasPecas);
+        //EstoqueDePecas pecas = new EstoqueDePecas();
+        //String[] novasPecas = pecas.pecasAtualizadas();
+        //estoque.setConjunto(novasPecas);
         estoque.verificarEstoque();
 
     }

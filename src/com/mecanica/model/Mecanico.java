@@ -1,6 +1,8 @@
 package com.mecanica.model;
 
 
+import com.mecanica.oficina.Elevadores;
+
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Mecanico {
@@ -17,7 +19,7 @@ public class Mecanico {
 
     // Métodos
 
-    Elevador elevador = new Elevador();
+    Elevadores elevador = new Elevadores();
 
     public void verificarElevador() {
         if (!elevador.elevador1()) {
