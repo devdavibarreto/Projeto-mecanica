@@ -6,18 +6,39 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Elevadores extends Elevador {
 
-    public static boolean elevador1(boolean oculpados) {
+    public  boolean elevador1() {
         int numeroSorteado = elevadorOculpado();
-        boolean oculpado = oculpados;
+        boolean oculpado = false;
+
+        if (numeroSorteado == 1 ){
+            oculpado= true;
+        }else if(numeroSorteado == 4)
+            oculpado= true;
+
         return oculpado;
     }
 
-    public static boolean elevador2(boolean oculpados) {
-        boolean oculpado = oculpados;
+    public  boolean elevador2() {
+        int numeroSorteado = elevadorOculpado();
+        boolean oculpado = false;
+
+        if (numeroSorteado == 2 ){
+            oculpado= true;
+        }else if(numeroSorteado == 4)
+            oculpado= true;
+
         return oculpado;
     }
-    public static boolean elevador3(boolean oculpados) {
-        boolean oculpado = oculpados;
+
+    public  boolean elevador3() {
+        int numeroSorteado = elevadorOculpado();
+        boolean oculpado = false;
+
+        if (numeroSorteado == 3 ){
+            oculpado= true;
+        }else if(numeroSorteado == 4)
+            oculpado= true;
+
         return oculpado;
     }
 
@@ -26,24 +47,8 @@ public class Elevadores extends Elevador {
 
     public  static int elevadorOculpado() {
         int numeroSorteado = ThreadLocalRandom.current().nextInt(0, 4);
-        boolean oculpados = false;
-        if (numeroSorteado == 1) {
-            oculpados = true;
-            elevador1(oculpados);
-        } else if (numeroSorteado == 2) {
-            oculpados = true;
-            elevador2(oculpados);
-        }else if (numeroSorteado == 3) {
-            oculpados = true;
-            elevador3(oculpados);
-        }
-        else {
-            oculpados = true;
-            elevador1(oculpados);
-            elevador2(oculpados);
-            elevador3(oculpados);
-        }
-        return oculpados;
+
+        return numeroSorteado;
 
     }
 
