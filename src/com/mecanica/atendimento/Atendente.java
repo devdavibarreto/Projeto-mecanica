@@ -33,10 +33,11 @@ public class Atendente {
         mecanico.mecanicoDisponivel();
 
 
+
         Estoque estoque = new Estoque();
-        //EstoqueDePecas pecas = new EstoqueDePecas();
-        //String[] novasPecas = pecas.pecasAtualizadas();
-        //estoque.setConjunto(novasPecas);
+        EstoqueDePecas pecas = new EstoqueDePecas();
+        String[] novasPecas = pecas.pecasAtualizadas();
+        estoque.setConjunto(novasPecas);
         estoque.verificarEstoque();
 
     }

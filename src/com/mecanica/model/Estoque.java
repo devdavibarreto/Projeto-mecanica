@@ -37,7 +37,10 @@ public class Estoque {
             } else {
                 for (int peca = 0; peca < conjunto.length; peca++) {
 
-                    System.out.println("AS PEÇAS EM ESTOQUE SÃO " + conjunto[peca]);
+                   if (peca == 0){
+                       peca ++;
+                   }
+                    System.out.println("AS PEÇAS EM ESTOQUE SÃO " + peca  + "º "+ conjunto[peca]);
 
                 }
             }
