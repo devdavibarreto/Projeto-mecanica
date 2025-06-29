@@ -1,6 +1,7 @@
 package com.mecanica.atendimento;
 
 import com.mecanica.model.*;
+import com.mecanica.oficina.estoque.EstoqueDePecas;
 
 public class Atendente {
     public static void main(String[] args) {
@@ -33,7 +34,9 @@ public class Atendente {
 
 
         Estoque estoque = new Estoque();
-        estoque.setConjunto(new String[]{"CARBURADOR GOL", " 20 filtro de Óleo de motor ", "Tampa de óleo golf", " 20 Óleos motor 10W40"});
+        EstoqueDePecas pecas = new EstoqueDePecas();
+        String[] novasPecas = pecas.pecasAtualizadas();
+        estoque.setConjunto(novasPecas);
         estoque.verificarEstoque();
 
     }
