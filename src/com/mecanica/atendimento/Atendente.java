@@ -1,5 +1,6 @@
 package com.mecanica.atendimento;
 
+import com.mecanica.atendimento.virtual.AtendimentoVirtual;
 import com.mecanica.model.*;
 import com.mecanica.oficina.estoque.EstoqueDePecas;
 
@@ -39,6 +40,10 @@ public class Atendente {
         String[] novasPecas = pecas.pecasAtualizadas();
         estoque.setConjunto(novasPecas);
         estoque.verificarEstoque();
+
+
+        AtendimentoVirtual clienteVirtual2 = new AtendimentoVirtual();
+        clienteVirtual2.atendimentoVirtual();
 
     }
 }
